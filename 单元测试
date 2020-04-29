@@ -1,0 +1,189 @@
+#include "stdafx.h"
+#include "CppUnitTest.h"
+#include"C:\Users\17499\source\repos\软件工程第四次作业（结对编程自动出题：四则运算）\软件工程第四次作业（结对编程自动出题：四则运算）\123.h"
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace UnitTest1
+{		
+	TEST_CLASS(UnitTest1)
+	{
+	public:
+		
+		TEST_METHOD(TestMethod1)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 1;
+			sign5 = 1;
+			sign6 = 1;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x,test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x,test2);
+				Assert::AreEqual <int>(14, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		};
+		TEST_METHOD(TestMethod2)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 0;
+			sign5 = 0;
+			sign6 = 0;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x, test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x, test2);
+				Assert::AreEqual <int>(0, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		}
+		TEST_METHOD(TestMethod3)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 0;
+			sign5 = 0;
+			sign6 = 1;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x, test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x, test2);
+				Assert::AreEqual <int>(9, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		};
+		TEST_METHOD(TestMethod4)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 0;
+			sign5 = 1;
+			sign6 = 0;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x, test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x, test2);
+				Assert::AreEqual <int>(1, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		};
+		TEST_METHOD(TestMethod5)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 0;
+			sign5 = 1;
+			sign6 = 1;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x, test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x, test2);
+				Assert::AreEqual <int>(10, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		};
+		TEST_METHOD(TestMethod6)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 1;
+			sign5 = 0;
+			sign6 = 0;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x, test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x, test2);
+				Assert::AreEqual <int>(4, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		};
+		TEST_METHOD(TestMethod7)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 1;
+			sign5 = 0;
+			sign6 = 1;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x, test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x, test2);
+				Assert::AreEqual <int>(13, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		};
+		TEST_METHOD(TestMethod8)
+		{
+			char str[100][100];
+			node OperationFormula[100][20];//存储运算式
+			int i, j, n, max, num, sign4, sign5, sign6, test1 = 0, test2 = 0, test3 = 0;
+			int x = 512;//随机数种子
+			n = 10;
+			max = 1;
+			num = 1234;
+			sign4 = 1;
+			sign5 = 1;
+			sign6 = 0;
+			if (sign6 == 1)cun(str, n, test3);
+			for (i = 0; i < n; i++)
+			{
+				ran(x);
+				srand(x);
+				j = create1(i, OperationFormula, max, num, sign5, x, test1);
+				if (sign4 == 1)create2(OperationFormula, i, j, x, test2);
+				Assert::AreEqual <int>(5, (test1*test1 + test2 * test2 + test3 * test3));
+			}
+		}
+	};
+}
